@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "任务-5.2.1",
+      "appliesTo": "Assets/Shaders/5.2.1.shader",
+      "type": "launch"
+    }
+  ]
+}
