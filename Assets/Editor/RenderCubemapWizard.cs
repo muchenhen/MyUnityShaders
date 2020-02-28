@@ -1,19 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+using System.Collections;
 
-public class RenderCubemapWizard : ScriptableWizard
-{
-    public Transform renderFromPosition;
-    public Cubemap cubemap;
-
-    void OnWizardUpdate() {
-        helpString = "Select transform to render from and cubemap to render into";
-        isValid = (renderFromPosition != null) && (cubemap!=null);
-    }
-
-    void OnWizardCreate () {
+public class RenderCubemapWizard : ScriptableWizard {
+	
+	public Transform renderFromPosition;
+	public Cubemap cubemap;
+	
+	void OnWizardUpdate () {
+		helpString = "Select transform to render from and cubemap to render into";
+		isValid = (renderFromPosition != null) && (cubemap != null);
+	}
+	
+	void OnWizardCreate () {
 		// create temporary camera for rendering
 		GameObject go = new GameObject( "CubemapCamera");
 		go.AddComponent<Camera>();
@@ -25,7 +24,8 @@ public class RenderCubemapWizard : ScriptableWizard
 		// destroy temporary camera
 		DestroyImmediate( go );
 	}
-    [MenuItem("GameObject/Render into Cubemap")]
+	
+	[MenuItem("GameObject/Render into Cubemap")]
 	static void RenderCubemap () {
 		ScriptableWizard.DisplayWizard<RenderCubemapWizard>(
 			"Render cubemap", "Render!");
