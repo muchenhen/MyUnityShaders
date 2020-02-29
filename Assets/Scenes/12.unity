@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 533155584}
   - component: {fileID: 533155587}
   - component: {fileID: 533155588}
+  - component: {fileID: 533155589}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -212,15 +213,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533155583}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa5ca9cfdeeaea947a2f4e2c862d4b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   briSatConShader: {fileID: 4800000, guid: 30c6583108ad4dd4b9a3dc85aa431fde, type: 3}
-  brightness: 1
-  saturation: 1
-  contrast: 1
+  brightness: 0.93
+  saturation: 1.84
+  contrast: 1.23
 --- !u!114 &533155588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,9 +235,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   edgeDetectShader: {fileID: 4800000, guid: fd5fc12865f396e4ab60f5c3797f4bbe, type: 3}
-  edgesOnly: 1
+  edgesOnly: 0.711
   edgeColor: {r: 0, g: 0, b: 0, a: 1}
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &533155589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533155583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67988a9cdf77c464bad2e16f2426842f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaussianBlurShader: {fileID: 4800000, guid: f18a8a4865b4d974a9ab3f28148ce7e5, type: 3}
+  iterations: 1
+  blurSpread: 0.2
+  downSample: 2
 --- !u!1 &944005657
 GameObject:
   m_ObjectHideFlags: 0
