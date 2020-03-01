@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\12\fifth.cs" />
      <Compile Include="Assets\Scripts\12\fourth.cs" />
      <Compile Include="Assets\Scripts\12\PostEffectBase.cs" />
      <Compile Include="Assets\Scripts\12\second.cs" />
@@ -55,6 +56,7 @@
      <None Include="Assets\Shaders\9\9.4.5.shader" />
      <None Include="Assets\Shaders\9\9.4.2.shader" />
      <None Include="Assets\Shaders\8\8.4.shader" />
+     <None Include="Assets\Shaders\12\12.5.shader" />
      <None Include="Assets\Shaders\10\10.4.shader" />
      <None Include="Assets\Shaders\7\7.2.2.2.shader" />
      <None Include="Assets\Shaders\7\7.2.2.shader" />
