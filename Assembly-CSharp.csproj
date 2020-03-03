@@ -77,9 +77,11 @@
      <None Include="Assets\Shaders\8\8.6.1.shader" />
      <None Include="Assets\Shaders\5\5.2.1.shader" />
      <None Include="Assets\Shaders\9\phong.shader" />
+     <None Include="Assets\Shaders\14\14.2.shader" />
      <None Include="Assets\Shaders\7\7.3.shader" />
      <None Include="Assets\Shaders\8\8.5.shader" />
      <None Include="Assets\Shaders\6\6.5.2.shader" />
+     <None Include="Assets\Shaders\15\15.1.shader" />
      <None Include="Assets\Shaders\10.2\10.2.shader" />
      <None Include="Assets\Shaders\9\9.2.2.shader" />
      <None Include="Assets\Shaders\6\6.4.3.shader" />
