@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/15.unity
+- path: Assets/Unreality/outline/outline.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
