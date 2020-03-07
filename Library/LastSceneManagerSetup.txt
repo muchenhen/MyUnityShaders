@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Unreality/outline/outline.unity
+- path: "Assets/Unreality/01\u63CF\u8FB9\u6548\u679C \u5404\u79CD\u5C1D\u8BD5/outline.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

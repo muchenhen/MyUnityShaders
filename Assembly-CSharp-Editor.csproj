@@ -46,6 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\RenderCubemapWizard.cs" />
+     <Compile Include="Assets\Editor\WriteAverageNormal.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>F:/UnityPrograme/UnityShader/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
