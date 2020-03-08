@@ -50,6 +50,8 @@
      <Compile Include="Assets\InDoor\Scripts\12\PostEffectBase.cs" />
      <Compile Include="Assets\InDoor\Scripts\12\second.cs" />
      <Compile Include="Assets\InDoor\Scripts\12\third.cs" />
+     <Compile Include="Assets\PostEffects\01亮度对比度饱和度\ColorCorrect.cs" />
+     <Compile Include="Assets\PostEffects\PostEffectsBase.cs" />
      <None Include="Assets\InDoor\Shaders\6\6.5.3.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.2.shader" />
      <None Include="Assets\InDoor\Shaders\9\blinn.shader" />
@@ -69,6 +71,7 @@
      <None Include="Assets\InDoor\Shaders\8\8.6.2.shader" />
      <None Include="Assets\InDoor\Shaders\9\9.4.3.shader" />
      <None Include="Assets\InDoor\Shaders\10\10.5.shader" />
+     <None Include="Assets\Wow\01简单动画\Shaders\01.01.shader" />
      <None Include="Assets\Unreality\01描边效果 各种尝试\PostOutlineTest.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.3.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.4.shader" />

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/Unreality/01\u63CF\u8FB9\u6548\u679C \u5404\u79CD\u5C1D\u8BD5/outline.unity"
+- path: "Assets/PostEffects/01\u4EAE\u5EA6\u5BF9\u6BD4\u5EA6\u9971\u548C\u5EA6/01.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -28,6 +28,7 @@ Shader "Unreality/PostOutlineTest"
             float4 _OutlineColor;
             sampler2D _MainTex;
             sampler2D _NormalTex;
+
             struct appdata
             {
                 float4 vertex : POSITION;
@@ -42,7 +43,7 @@ Shader "Unreality/PostOutlineTest"
             v2f vert(appdata v) : SV_POSITION
             {
                 v2f o;
-                UNITY_INITIALIZE_OUTPUT(v2f, o);
+                //UNITY_INITIALIZE_OUTPUT(v2f, o);
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 float3 viewNormal = mul((float3x3)UNITY_MATRIX_IT_MV,v.tangent.xyz);
                 float3 projNormal = TransformViewToProjection(viewNormal.xyz);
@@ -51,7 +52,8 @@ Shader "Unreality/PostOutlineTest"
                 float4 nearUpperRight = mul(unity_CameraInvProjection,float4(1,1,UNITY_NEAR_CLIP_VALUE,_ProjectionParams.y));
                 float aspect = abs(nearUpperRight.y/nearUpperRight.x);
                 NDCnormal.x *= aspect;
-                o.vertex.xy = o.vertex.xy + NDCnormal.xy * _OutlineWidth * 0.01;
+                
+                o.vertex.xy = o.vertex.xy + NDCnormal.xy * _OutlineWidth * 0.1;
                 return o;
             }
 
