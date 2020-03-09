@@ -50,7 +50,7 @@
      <Compile Include="Assets\InDoor\Scripts\12\PostEffectBase.cs" />
      <Compile Include="Assets\InDoor\Scripts\12\second.cs" />
      <Compile Include="Assets\InDoor\Scripts\12\third.cs" />
-     <Compile Include="Assets\PostEffects\01亮度对比度饱和度\ColorCorrect.cs" />
+     <Compile Include="Assets\PostEffects\01颜色校正\ColorCorrectionCurves.cs" />
      <Compile Include="Assets\PostEffects\PostEffectsBase.cs" />
      <None Include="Assets\InDoor\Shaders\6\6.5.3.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.2.shader" />
@@ -59,6 +59,7 @@
      <None Include="Assets\InDoor\Shaders\9\9.4.2.shader" />
      <None Include="Assets\InDoor\Shaders\8\8.4.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.5.shader" />
+     <None Include="Assets\PostEffects\01颜色校正\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\InDoor\Shaders\10\10.4.shader" />
      <None Include="Assets\InDoor\Shaders\7\7.2.2.2.shader" />
      <None Include="Assets\InDoor\Shaders\7\7.2.2.shader" />
@@ -72,6 +73,7 @@
      <None Include="Assets\InDoor\Shaders\9\9.4.3.shader" />
      <None Include="Assets\InDoor\Shaders\10\10.5.shader" />
      <None Include="Assets\Wow\01简单动画\Shaders\01.01.shader" />
+     <None Include="Assets\PostEffects\01颜色校正\ColorCorrection3DLut.shader" />
      <None Include="Assets\Unreality\01描边效果 各种尝试\PostOutlineTest.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.3.shader" />
      <None Include="Assets\InDoor\Shaders\12\12.4.shader" />
@@ -79,9 +81,12 @@
      <None Include="Assets\Unreality\01描边效果 各种尝试\NewUnlitShader.shader" />
      <None Include="Assets\InDoor\Shaders\7\7.2.1.shader" />
      <None Include="Assets\InDoor\Shaders\11\11.1.shader" />
+     <None Include="Assets\PostEffects\01颜色校正\ColorCorrectionCurves.shader" />
      <None Include="Assets\Unreality\01描边效果 各种尝试\back facing.shader" />
      <None Include="Assets\InDoor\Shaders\8\8.6.1.shader" />
      <None Include="Assets\InDoor\Shaders\5\5.2.1.shader" />
+     <None Include="Assets\PostEffects\01颜色校正\ColorCorrectionSelective.shader" />
+     <None Include="Assets\PostEffects\01颜色校正\ColorCorrectionEffect.shader" />
      <None Include="Assets\InDoor\Shaders\9\phong.shader" />
      <None Include="Assets\Unreality\01描边效果 各种尝试\testOutline.shader" />
      <None Include="Assets\InDoor\Shaders\15\15.2.shader" />

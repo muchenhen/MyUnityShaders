@@ -3,7 +3,8 @@ guid: aa5ca9cfdeeaea947a2f4e2c862d4b48
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - briSatConShader: {fileID: 4800000, guid: 30c6583108ad4dd4b9a3dc85aa431fde, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
