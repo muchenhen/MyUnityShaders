@@ -23,7 +23,7 @@ Shader "Effects/ColorCorrectionCurves"
     };
 
     sampler2D _MainTex;
-    sampler2D_float _CameraDepthTexture;
+    sampler2D_float _CameraDepthTexture;//摄像机深度缓冲贴图
     float4 _CameraDepthTexture_ST;
     uniform float4 _MainTex_TexelSize;
     sampler2D _RgbTex;
@@ -36,7 +36,7 @@ Shader "Effects/ColorCorrectionCurves"
         v2f o;
         o.pos = UnityObjectToClipPos(v.vertex);
         o.uv = v.texcoord.xy;
-        o.uv2 = TRANSFORM_TEX(v.texcoord,_CameraDepthTexture);
+        o.uv2 = TRANSFORM_TEX(v.texcoord,_CameraDepthTexture);//计算实际使用UV
 
         #if UNITY_UV_STARTS_AT_TOP
         if(_MainTex_TexelSize.y < 0)
@@ -48,17 +48,19 @@ Shader "Effects/ColorCorrectionCurves"
 
     half4 frag (v2f i) : SV_TARGET
     {
-        half4 color = tex2D(_MainTex,i.uv);
+        half4 color = tex2D(_MainTex,i.uv);//将主贴图的颜色加载
 
-        half3 ycoords = half3(0.5,1.5,2.5) * 0.25;
+        half3 ycoords = half3(0.5,1.5,2.5) * 0.25;//
 
+        //加载rgb贴图的三个通道的分量
         half3 red = tex2D(_RgbTex,half2(color.r,ycoords.x)).rgb * half3(1,0,0);
-        half3 green = tex2D(_RgbTex,half2(color.g,ycoords.x)).rgb * half3(0,1,0);
-        half3 blue = tex2D(_RgbTex,half2(color.b,ycoords.x)).rgb * half3(0,0,1);
+        half3 green = tex2D(_RgbTex,half2(color.g,ycoords.y)).rgb * half3(0,1,0);
+        half3 blue = tex2D(_RgbTex,half2(color.b,ycoords.z)).rgb * half3(0,0,1);
 
+        //加载深度贴图
         half theDepth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture,i.uv2);
         half zval = tex2D(_ZCurve,half2(Linear01Depth(theDepth),0.5));
-
+        //深度纹理的三个分量
         half3 depthRed = tex2D(_RgbDepthTex, half2(color.r, ycoords.x)).rgb * half3(1,0,0);
 		half3 depthGreen = tex2D(_RgbDepthTex, half2(color.g, ycoords.y)).rgb * half3(0,1,0);
 		half3 depthBlue = tex2D(_RgbDepthTex, half2(color.b, ycoords.z)).rgb * half3(0,0,1);

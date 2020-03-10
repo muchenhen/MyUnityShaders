@@ -70,6 +70,7 @@ namespace UnityStandardAssets.ImageEffects
         }
         public override bool CheckResources()
         {
+            //进行硬件检查
             CheckSupport (mode == ColorCorrectionMode.Advanced);
 
             colorCorrectMaterial = CheckShaderAndCreateMaterial(simpleColorCorrectionCurvesShader,colorCorrectMaterial);
@@ -150,7 +151,7 @@ namespace UnityStandardAssets.ImageEffects
         {
             if (CheckResources()==false)
 			{
-                Graphics.Blit (source, destination);
+                Graphics.Blit (source, destination);//检查通过后把源数据复制到目标
                 return;
             }
 
@@ -170,6 +171,7 @@ namespace UnityStandardAssets.ImageEffects
                 renderTarget2Use = RenderTexture.GetTemporary (source.width, source.height);
             }
 
+            //使用深度矫正的话执行以下操作
             if (useDepthCorrection)
 			{
                 colorCorrectDepthMaterial.SetTexture ("_RgbTex", rgbChannelTex);
@@ -187,6 +189,7 @@ namespace UnityStandardAssets.ImageEffects
                 Graphics.Blit (source, renderTarget2Use, colorCorrectMaterial);
             }
 
+            //是否需要执行指定颜色交换
             if (selectiveColorCorrect)
 			{
                 selectiveColorCorrectMaterial.SetColor ("selColor", selectiveFromColor);

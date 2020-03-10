@@ -1,5 +1,5 @@
 sceneSetups:
-- path: "Assets/PostEffects/01\u989C\u8272\u6821\u6B63/01.unity"
+- path: "Assets/Wow/01\u7B80\u5355\u52A8\u753B/01\u7B80\u5355\u52A8\u753B.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0

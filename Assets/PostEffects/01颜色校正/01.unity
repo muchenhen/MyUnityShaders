@@ -558,7 +558,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   saturation: 1
   selectiveColorCorrect: 0
-  selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
+  selectiveFromColor: {r: 0, g: 0, b: 0, a: 1}
   selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
   mode: 0
   updateTextures: 1
